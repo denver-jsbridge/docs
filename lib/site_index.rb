@@ -6,7 +6,7 @@ class SiteIndex < Erector::Widget
     {
       'setup' => ['installfest'],
       'rails' => ['intro-to-rails', 'job-board', 'message-board'],
-      'frontend' => ['frontend', 'javascript-snake-game', 'javascript-to-do-list', 'javascript-to-do-list-with-react'],
+      'frontend' => ['frontend', 'javascript-installfest', 'javascript-snake-game', 'javascript-to-do-list', 'javascript-to-do-list-with-react'],
       'ruby' => ['learn-to-code', 'ruby']
     }
   end
