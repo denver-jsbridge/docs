@@ -15,6 +15,7 @@ class SiteIndex < Erector::Widget
       ],
       'frontend' => [
         'frontend',
+        'javascript-installfest',
         'javascript-snake-game',
         'javascript-to-do-list',
         'javascript-to-do-list-with-react'

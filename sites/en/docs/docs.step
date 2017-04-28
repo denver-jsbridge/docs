@@ -36,6 +36,10 @@ MARKDOWN
 
 h1 'Javascript'
 
+site_desc 'javascript-installfest', <<-MARKDOWN
+Some Description
+MARKDOWN
+
 site_desc 'javascript-snake-game', <<-MARKDOWN
 A beginner Javascript specific curriculum that walks you through building a simple game.
 MARKDOWN
