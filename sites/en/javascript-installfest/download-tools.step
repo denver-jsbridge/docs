@@ -1,0 +1,58 @@
+step "Install Slack" do
+  message "We'll be using the Slack messaging platform during the workshop and afterward to keep in touch."
+
+  step "Download Slack (All Platforms)" do
+    message "Download the [Slack installer](https://slack.com/downloads) and follow the instructions."
+  end
+
+  step "Sign up for the Denver/Boulder Railsbridge Slack!" do
+    message "TODO: Add link!"
+  end
+
+  step "Introduce yourself" do
+    message "Say 'Hello' and share your favorite flavor of ice cream in the #general channel."
+  end
+end
+
+step "Install Google Chrome" do
+  step "Download Chrome (All Platforms)" do
+    message "Download [Google Chrome](https://www.google.com/chrome/browser/features.html)."
+  end
+  step 'Mac: Find the downloaded file in Finder' do
+    message "If you weren't asked where to save it, it's probably in the Downloads folder."
+    message "Double click the Chrome `.dmg` file. Drag Chrome into your Applications folder."
+    img src: 'img/install-chrome-mac.png', alt: 'Image of installing Google Chrome on Mac.', height: '400px'
+  end
+  step 'Windows: Find the downloaded file in Finder' do
+    message "If you weren't asked where to save it, it's probably in the Downloads folder."
+    message "Double click the ChromeSetup `.exe` file and follow the prompts to install Chrome."
+  end
+end
+
+
+step "Install Atom" do
+  message "We'll be using the Atom text editor during the workshop, though you are free to use a different editor if you prefer. It must be a plain-text editor, such as vi or TextMate."
+
+  important <<-MARKDOWN
+  Microsoft Word and other word processing programs, including TextEdit and Notepad, will not work.
+
+  When in doubt, use Atom.
+  MARKDOWN
+
+  step "Download Atom (All Platforms)" do
+    message "Download the [Atom installer](https://atom.io)."
+  end
+
+  step 'Mac: Find the downloaded file in Finder' do
+    message "If you weren't asked where to save it, it's probably in the Downloads folder."
+    message "Double click the Atom `.zip` file to extract it. Drag Atom into your Applications folder."
+
+    img src: 'img/install_atom_mac.gif', alt: 'Animation of extracting the Atom zip file and moving the contents to the Applications folder'
+  end
+
+  step 'Windows: Run the downloaded file' do
+    message "Double click the downloaded AtomSetup `.exe` file to install Atom."
+    img src: 'img/install-atom-windows.png', alt: 'Image of executing the downloaded Atom executable'
+  end
+end
+next_step "introduction-to-html"
