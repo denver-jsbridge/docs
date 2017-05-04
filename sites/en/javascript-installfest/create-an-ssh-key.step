@@ -1,6 +1,6 @@
 message "An SSH key uniquely identifies you (and your computer) when your computer is communicating with other computers. Think of an SSH key as a fancy password."
 
-message "You'll need one of these to create your Heroku and Github accounts."
+message "You'll need one of these to create your Github account."
 
 option "Do you have a preexisting SSH key for some other reason?" do
   message "Maybe you went to a previous RailsBridge workshop, or generated an SSH key to push some code to GitHub? You can check with the following command:"
@@ -10,7 +10,7 @@ option "Do you have a preexisting SSH key for some other reason?" do
     message "Go on to <a href='#generate-key'>Generate an SSH key"
   end
   option_half "'/Users/[something]/.ssh/id_rsa'" do
-    link_without_toc 'create_a_heroku_account'
+    link_without_toc 'create-a-webpage'
   end
 end
 
