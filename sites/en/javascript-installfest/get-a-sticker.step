@@ -1,0 +1,11 @@
+message "Find a volunteer and have them take a look at your site."
+
+step "Show your Heroku app to a volunteer" do
+  message "Visit the heroku site you made on the previous page and create a new drink."
+end
+
+step "Congratulations!" do
+  message "You get a sticker! (Or a high-five if there aren't any stickers)."
+end
+
+message "You've finished the installfest. See you tomorrow!"
