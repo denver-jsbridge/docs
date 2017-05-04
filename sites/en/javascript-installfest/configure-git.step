@@ -1,9 +1,11 @@
 message "In the next commands, don't copy-paste the whole thing. Use the name and email address you usually use. Don't use a username (like your github username)."
 
+important "If you are using Windows, open the Git Bash program and use that as your terminal. If you don't have Git Bash, ask a TA for help."
+
 console 'git config --global user.name "Your Actual Name, In Quotes"'
 console 'git config --global user.email "Your Actual Email, In Quotes"'
 
-important "Use the same email address for heroku, git, github, and ssh."
+important "Use the same email address for git, github, and ssh."
 
 verify do
   console "git config --get user.name"
