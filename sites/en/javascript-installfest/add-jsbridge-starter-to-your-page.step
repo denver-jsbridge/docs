@@ -1,3 +1,12 @@
 message "do that"
 
+step "Download the starter code" do
+end
+
+step "save it in your github pages repository" do
+end
+
+step "add a link from your index.html page to the starter page" do
+end
+
 next_step "get-a-sticker"
