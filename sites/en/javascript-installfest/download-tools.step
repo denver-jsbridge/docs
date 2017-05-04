@@ -27,7 +27,7 @@ step "Install Google Chrome" do
     message "Double click the Chrome `.dmg` file. Drag Chrome into your Applications folder."
     img src: 'img/install-chrome-mac.png', alt: 'Image of installing Google Chrome on Mac.', height: '400px'
   end
-  step 'Windows: Find the downloaded file in Finder' do
+  step 'Windows: Find the downloaded file' do
     message "If you weren't asked where to save it, it's probably in the Downloads folder."
     message "Double click the ChromeSetup `.exe` file and follow the prompts to install Chrome."
   end
