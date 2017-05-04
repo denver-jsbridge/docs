@@ -6,11 +6,15 @@ step "Install Slack" do
   end
 
   step "Sign up for the Denver/Boulder Railsbridge Slack!" do
-    message "TODO: Add link!"
+    message "You can sign up [here](http://denver-railsbridge.herokuapp.com/)"
   end
 
   step "Introduce yourself" do
     message "Say 'Hello' and share your favorite flavor of ice cream in the #general channel."
+  end
+
+  step "Join the #may5-2017 channel" do
+    message "This is where you can ask questions and share your progress throughout this javascript bridge workshop"
   end
 end
 
