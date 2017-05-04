@@ -1,8 +1,16 @@
-message "On Windows, the easiest way to install git and set everything up is with the Rails Installer. "
-span "Head over to our "
-a "Rails Installer instructions", :href => "/installfest/windows", :class => 'link'
-span " (courtesy the Rails workshop Installfest instructions). Come back at the end of the page. Do not make a Heroku account!"
-important "For real: come back at the bottom of the page, after step 9!"
-span "After getting done with RailsInstaller, come back here and "
-a 'create a Webpage', :href => "create-a-webpage"
-span "."
+message <<-MARKDOWN
+These instructions should work for all versions of Windows from XP to Windows 10.
+
+You may need to login as Administrator, or give the Administrator password when installing some programs, depending on your Windows version and user settings.
+MARKDOWN
+
+step "Download Git" do
+  message "Download [Git](https://git-scm.com/download/win)."
+end
+step "Install Git" do
+  message <<-MARKDOWN
+  Run the downloaded `Git-xxx.exe` file and follow the instructions.
+  MARKDOWN
+end
+
+next_step "configure-git"

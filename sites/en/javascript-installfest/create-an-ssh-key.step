@@ -16,7 +16,7 @@ end
 
 a name: "generate-key"
 option "Generate an SSH key" do
-  important "Use the same email address for heroku, git, github, and ssh."
+  important "Use the same email address for git, github, and ssh."
 
   important "**REPLACE** `student@example.com` with your **actual email address** below."
 

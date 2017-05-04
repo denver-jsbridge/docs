@@ -57,7 +57,7 @@ steps do
   step do
     message "Woohoo!!! Take a breath and wait a few minutes."
     message "Since you gave your GitHub repository a special name (in the format [your-github-user-name].github.io), GitHub will automatically take the contents of this one repository and make them your personal web page on GitHub. However, there's a small lag between the first push and being able to see your content on the web."
-    message "In a few minutes time, when you visit [your-github-user-name].github.io in a browser, you should see a blank white page: this is great! You're looking at the index.html file you just created, now live on the web!"
+    message "In a few minutes time, when you visit [your-github-user-name].github.io in a browser, you should see the portfolio page you made: this is great! You're looking your code, now live on the web!"
   end
 end
 
