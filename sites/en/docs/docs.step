@@ -37,6 +37,7 @@ MARKDOWN
 h1 'Javascript'
 
 site_desc 'javascript-installfest', <<-MARKDOWN
+Instructions for installing tools on your computer for Javascript development.
 Some Description
 MARKDOWN
 
