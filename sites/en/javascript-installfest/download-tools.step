@@ -54,5 +54,12 @@ step "Install Atom" do
     message "Double click the downloaded AtomSetup `.exe` file to install Atom."
     img src: 'img/install-atom-windows.png', alt: 'Image of executing the downloaded Atom executable'
   end
+
+  step "Linux" do
+    message <<-MARKDOWN
+  
+  Checkout this section of the [Atom manual](http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux) for the latest instructions.
+  MARKDOWN
+  end
 end
-next_step "introduction-to-html"
+next_step "install-git-for-your-operating-system"

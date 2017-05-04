@@ -37,4 +37,4 @@ verify "successful installation" do
   fuzzy_result "git version {FUZZY}2.x.x{/FUZZY}"
 end
 #actual next step: configure_git
-next_step "create-github-account"
+next_step "configure-git"

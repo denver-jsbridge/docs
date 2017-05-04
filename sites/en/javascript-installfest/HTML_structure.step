@@ -95,4 +95,4 @@ When you refresh your browser, you should see the title on the tab in Chrome.
 end
 
 message "Now that you have a webpage, you need to host it somewhere! For that, we'll be using git and github pages"
-next_step "install-git-osx"
+next_step "create-a-github-account"
