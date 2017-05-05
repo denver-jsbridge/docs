@@ -5,8 +5,8 @@ step "Download the starter code" do
   message "Once you've downloaded the zip archive file, you will need to extract the contents and open index.html with your browser. If you have trouble extracting the files or opening them, get an instructor to help you out."
 end
 
-step "save the extracted files inside your GitHub pages git repository" do
-  step "make a new folder/directory" do
+step "Save the extracted files inside your GitHub pages git repository" do
+  step "Make a new folder/directory" do
 
     message "Navigate to your GitHub pages repository. Copy/paste the downloaded folder right next to your index.html webpage. Then, rename the folder to be snake-game."
 
@@ -14,7 +14,7 @@ step "save the extracted files inside your GitHub pages git repository" do
 end
 
 step "Add a list for showcasing your projects to your webpage" do
-  step "add a list for your projects to your website" do
+  step "Add a list for your projects to your website" do
      message "Similar to the list of skills, add another list to your page for showcasing your projects."    
   end
   message "Your code should now look something like this:"
