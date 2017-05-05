@@ -22,18 +22,37 @@ step "Add a list for showcasing your projects to your webpage" do
   message "Open your page in the browser to see the new section you added."
 end
 
-step "add a link from your index.html page to the snake tutorial" do
-  message "this is an anchor tag"
-  message "You can next tags"
+step "Add a link from your index.html page to the starter code" do
+
+  message "An `a` tag is used in HTML to link to other pages on the web. The `a` stands for `anchor`. It has a `href` property that represents where the link goes to. The text inside the tag is what you will be able to click to navigate to the location specified in the `href` property."
+
+  source_code :html, '<a href="https://en.wikipedia.org/wiki/Grace_Hopper">Grace Hopper</a>'
+
+  message "you can also use anchor tags to link relatively to pages that are internal to your website, like we will be doing in this exercise."
+  
+  important "Don't forget that you can nest tags. For an example, you can create a list (li) of links (a)"
+
   step "Add an anchor tag for linking to your snake game" do
-  source_code :html, File.read('sites/en/javascript-installfest/html-examples/rachel-with-projects.html')
-  message "this is a picture of what you should see"
+  source_code :html, File.read('sites/en/javascript-installfest/html-examples/rachel-with-link.html')
+  message "The `href` points to `snake-game/index.html` because that is the location of the starter code webpage relative to your GitHub pages directory."
+  end
+
+  step "Open your browser and admire your new list." do
+    img src: 'img/rachel-with-links.png'
+  end
 end
 
-step "Push your changes to GitHub pages" do
+step "Push your code to GitHub" do
+    console 'git add .'
+    message "The `.` tells git that you want to add everything in this folder - the changes to the index page and the snake game files."
+    console 'git commit -m "add snake game project to my page"'
+    console 'git push -u origin master'
+    step "After a minute or two, observe your updated website live on GitHub pages" do
+      message "Navigate to [your-github-user-name].github.io and your updates should be live shortly!"
 
+    end
 end
 
-message "Here are some resources on CSS if you want to style your page more"
+important "If you'd like to take it a step further and add some style to your page, the frontend curriculum has [some resources on CSS](../frontend/basic_CSS) which will allow you do things like change fonts and background colors."
 
 next_step "one-last-thing"
