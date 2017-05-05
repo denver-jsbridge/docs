@@ -1,0 +1,39 @@
+message "In this step, we'll download the starter code from tomorrow's workshop, and add a link to it from our webpace"
+
+step "Download the starter code" do
+  message "Download the code from [this link](http://curriculum.railsbridge.org/javascript-snake-game/js-snake-game-tutorial.zip)"
+  message "Once you've downloaded the zip archive file, you will need to extract the contents and open index.html with your browser. If you have trouble extracting the files or opening them, get an instructor to help you out."
+end
+
+step "save the extracted files inside your GitHub pages git repository" do
+  step "make a new folder/directory" do
+
+    message "Navigate to your GitHub pages repository. Copy/paste the downloaded folder right next to your index.html webpage. Then, rename the folder to be snake-game."
+
+  end
+end
+
+step "Add a list for showcasing your projects to your webpage" do
+  step "add a list for your projects to your website" do
+     message "Similar to the list of skills, add another list to your page for showcasing your projects."    
+  end
+  message "Your code should now look something like this:"
+  source_code :html, File.read('sites/en/javascript-installfest/html-examples/rachel-with-projects.html')
+  message "Open your page in the browser to see the new section you added."
+end
+
+step "add a link from your index.html page to the snake tutorial" do
+  message "this is an anchor tag"
+  message "You can next tags"
+  step "Add an anchor tag for linking to your snake game" do
+  source_code :html, File.read('sites/en/javascript-installfest/html-examples/rachel-with-projects.html')
+  message "this is a picture of what you should see"
+end
+
+step "Push your changes to GitHub pages" do
+
+end
+
+message "Here are some resources on CSS if you want to style your page more"
+
+next_step "one-last-thing"
