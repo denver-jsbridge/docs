@@ -1,3 +1,5 @@
+important "To speed things up, we have pre-downloaded these tools onto flash drives for you. They should be on the tables in front of you. If you can't find one just ask a TA!"
+
 step "Install Slack" do
   message "We'll be using the Slack messaging platform during the workshop and afterward to keep in touch."
 
