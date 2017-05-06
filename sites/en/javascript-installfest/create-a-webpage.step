@@ -47,7 +47,7 @@ end
 steps do
 
   step do
-    message "Add some more lines of content to your HTML file. Introduce yourself."
+    message "In your editor, create a `portfolio.html` file. Add some lines of content to your HTML file. Introduce yourself."
     source_code :html, File.read('sites/en/javascript-installfest/html-examples/rachel-1.html')
 
     message "Now save the file and refresh your browser."
