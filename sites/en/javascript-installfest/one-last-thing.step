@@ -1,7 +1,7 @@
 message "Find a volunteer and have them take a look at your site."
 
 step "Show your GitHub pages site to a volunteer" do
-  message "Visit the heroku site you made on the previous page and create a new drink."
+  message "Just open the page up in your web browser. Make sure the link works!"
 end
 
 step "Congratulations!" do
