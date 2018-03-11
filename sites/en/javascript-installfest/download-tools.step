@@ -15,7 +15,7 @@ step "Install Slack" do
     message "Say 'Hello' and share your favorite flavor of ice cream in the #general channel."
   end
 
-  step "Join the #may5-2017 channel" do
+  step "Join the #jsbridge-may-2018 channel" do
     message "This is where you can ask questions and share your progress throughout this javascript bridge workshop"
   end
 end
