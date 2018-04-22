@@ -14,25 +14,23 @@ overview do
     developers used JavaScript for complex animations, making requests to servers, even doing
     complex calculations in the browser! The old approach of writing all your code in one place,
     with all the logic jumbled together, quickly became untenable. In response to that, the
-    JavaScript community has started developing patterns to help themselves organize their code,
-    making it more readable. Most of these patterns separate code into two buckets:
+    JavaScript community has developed patterns to help themselves organize their code, making 
+    it more readable. 
 
-      * __Views (or Components, or View Controllers)__ are in charge or rendering HTML elements, and
-      listening for user's actions like clicks and form submissions.
-      * __Models (or Stores)__ are responsible for the logic of your JavaScript application.
+    React focused on organizing code into __Components__ - small independent chunks of code in
+    charge of rendering HTML elements, and listening for user's actions like clicks and form
+    submissions.
 
-    There are many JavaScript libraries and frameworks that implement this structure, including
-    [AngularJS](https://angularjs.org/), [Ember.js](http://emberjs.com/), and [Backbone.js](http://backbonejs.org/).
-     They each have their own strengths and weaknesses. and we wouldn't presume to tell you
-    which one is "better." As you continue learning, you'll form your own opinions!
+    There are many JavaScript libraries and frameworks, including [AngularJS](https://angularjs.org/),
+    [Ember.js](http://emberjs.com/), and [Vue.js](https://vuejs.org/). They each have their own 
+    strengths and weaknesses. and we wouldn't presume to tell you which one is "better." As you 
+    continue learning, you'll form your own opinions!
 
-    For this tutorial, we'll be using [React](http://facebook.github.io/react/), a rendering library written by Facebook that has
+    For this tutorial, we'll be using [React](https://reactjs.org/), a rendering library written by Facebook that has
     grown in popularity over the last few years. To use React, you write your HTML as a series of __components__
-    in a language called __JSX__. Don't worry, JSX looks a lot like HTML! These components handle
-    the rendering of your HTML elements, as well as listen for user actions.
+    in a language called __JSX__ that is designed to help you by bringing JavaScript and HTML together in the same file.
+    These components handle the rendering of your HTML elements, as well as listen for user actions.
 
-    You'll be using React to make your view objects, and we'll use a simple JavaScript object as a model. We've
-    already built a lot of this structure for you! Let's walk through the code together.
   MARKDOWN
 end
 
