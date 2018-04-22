@@ -51,9 +51,8 @@ steps do
       Press enter. Your browser should now look like this:
       <img src="img/browser_console.png" alt="image of browser console with console.log"></img>
 
-      Congrats, you just wrote your first lines of JavaScript code! __console.log__ is an important function –
-      it allows you to print information to the browser's console. It's very helpful in debugging! You can also
-      use the __alert__ function to make a message pop up in the browser. Try it out!
+      Congrats, you just wrote your first lines of JavaScript code! __console.log__ allows you to print information to the browser's dev tools where you can see it. It's very helpful in debugging! You can also
+      use the __alert__ instead to make a message pop up in the browser. Try it out!
     MARKDOWN
   end
 
