@@ -96,26 +96,27 @@ steps do
   end
 
   step do
-    message "Arrays are a type of __object__ in JavaScript that are designated by the use of square brackets. Objects of all types in javascript often include helpful attributes!"
+    message "You can find out how many items are in an array by using the special __property__ it has called length."
 
     source_code :javascript, <<-JAVASCRIPT
+      var fruits = ["kiwi", "strawberry", "plum"]
       fruits.length
+      // the length is 3
     JAVASCRIPT
 
     message <<-MARKDOWN
-Objects can also have __functions__, which can be helpful for altering objects and learning more about them.
+Arrays also have __functions__, which can be helpful for altering them and learning more about them.
 Functions are __invoked__ with parentheses, which causes them to run.
     MARKDOWN
 
     source_code :javascript, <<-JAVASCRIPT
+      var fruits = ["kiwi", "strawberry", "plum"]
       fruits.push("orange")
-      fruits.slice(1)
+      // fruits is now ["kiwi", "strawberry", "plum", "orange"]
     JAVASCRIPT
 
     message <<-MARKDOWN
-The __push__ function allows us to add new items to an array. the slice function returns a new array with
-with everything to the right of the __index__ we provided. Here, we passed the function the number 1, so
-slice returned an array with everything after the first element in the array. (Note that the first element is assigned 0 as its index rather than 1.)
+The __push__ function allows us to add new items to the end of an existing array.
     MARKDOWN
   end
 
@@ -127,6 +128,7 @@ slice returned an array with everything after the first element in the array. (N
         return word + "s"
       }
       pluralize("kiwi")
+      // returns "kiwis"
     JAVASCRIPT
 
     message "Functions take **parameters**, which are the variables they work on. In this case, we made a function called pluralize that takes one parameter, a word."
@@ -151,10 +153,12 @@ slice returned an array with everything after the first element in the array. (N
     source_code :javascript, <<-JAVASCRIPT
       if(myVariable > 1) {
         console.log('YAY')
+      } else {
+        console.log('BOO')
       }
     JAVASCRIPT
 
-    message "This prints `YAY!` if the value stored in `myVariable` is greater than 1."
+    message "This prints `YAY` if the value stored in `myVariable` is greater than 1, otherwise it prints 'BOO'"
 
     message "Try changing the `>` in the conditional to a `<`."
   end
