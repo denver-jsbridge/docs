@@ -5,7 +5,7 @@ goals do
 end
 
 steps do
-  tip "If you have a 'railsbridge' folder on your computer or some other place you like to keep project files, `cd` to that directory and then follow the steps below."
+  tip "Go to your Portfolio folder which contains the index.html file you were working on and `cd` to that directory and then follow the steps below."
 
   step "Make a special new directory" do
     message "To get started on the project, you'll need to open up your command line. If you have a Mac, open up the Terminal app. If you're on a PC, look for a program called Command Prompt. You'll also need to know your GitHub user name and password. Wherever you see `[your-github-user-name]`, you'll replace that with your user name (and delete the braces: the `[` and `]`)."
@@ -21,43 +21,45 @@ steps do
   end
 
   step "Make a commit" do
-    console "mv portfolio.html index.html"
-    message "This renames the portfolio.html file to be index.html. This is important because a web browser will automatically display the page if it is named index.html."
+    console "mv ../index.html index.html"
+    message "This moves the index.html file, which is located one level above your github.io directory, into your github.io directory and names it index.html again. The '..' means go to one directory above the current one. And the second 'index.html' is what you want to name the file after it's been moved to your current github.io directory. The name of the file has to still be index.html after the move. This is important because a web browser will automatically display the page if it is named index.html."
+    console "ls"
+    message "This lists all the files in your current github.io directory. You should see your index.html file listed here."
     console "git add index.html"
     message "This tells git that you want to add the index.html file. The next line tells git you want to stage the file."
     console "git commit -m 'first commit'"
     message "You just made an initial commit. (Think of it as a snapshot of your project that you can come back to later.)"
   end
 
-  step "Add GitHub as a remote" do
-    message "You really do have to type your user name three times in the next command. Get ready for it."
-    console "git remote add origin https://[your-github-user-name]@github.com/[your-github-user-name]/[your-github-user-name].github.io.git"
-
-    message "You just set up a 'remote' &mdash; a git repository somewhere else (in this case, on GitHub) that also holds your project files."
-  end
-
-  step "Create a new repo via the GitHub UI" do
+  step "Create a new repo via the UI on your Github page" do
     tip "You can skip this step if you've created a ***[your-github-user-name].github.io*** page previously."
-    message "Navigate to https://github.com/[your-github-user-name]/"
-    message "Click 'Create a new repo' in the upper right"
-    img :src => "img/github_create_repo.png"
-    message "Type **[your-github-user-name].github.io** into the 'Repository name' box"
-    img :src => "img/github_name_your_repo.png"
+    message "Navigate to https://github.com/[your-github-user-name]/ in your web browser"
+    message "Click on the arrow next to the '+' sign in the upper right corner of your Github page to get a drop down menu, and select 'New repository'."
+    img :src => "img/github_create_repo2018.png"
+    message "Type **[your-github-user-name].github.io** into the 'Repository name' box. Leave the rest of the settings at their default values. You may leave the Description box empty for now. Click on the 'Create Repository' button."
+    img :src => "img/github_name_your_repo2018.png"
 
-    important "Do not choose 'Initialize this repository with a README' when creating the repo."
+    important "Do NOT choose 'Initialize this repository with a README' when creating the repo."
   end
 
+
+  step "Connect to your remote Github repository" do
+  	message "Connect to the remote repository you just created on Github from your local machine. This will allow you to later push your local project files to your remote Github repository, and allow those files to go live on the web. Go back to your Terminal or Command Prompt app to perform the next steps."
+    console "git remote add origin https://[your-github-user-name]/[your-github-user-name].github.io.git"
+    
+    
   step "Push your code to GitHub" do
     message "Now, push the new file you just committed to GitHub."
-    console 'git push -u origin master'
+    console "git push -u origin master"
     message "You'll probably be prompted to type your GitHub password at this point. After you do, you'll have just pushed your project to GitHub's servers!"
     important "If you have existing content in your GitHub Pages repo, this command will fail, and you will have to do a `git push -uf origin master` instead. Verify with a volunteer first that you're doing the right thing."
+  	message "Refresh your browser at the link https://github.com/[your-github-user-name]/[your-github-user-name].github.io . You should see your index.html file listed there now."
   end
 
   step do
     message "Woohoo!!! Take a breath and wait a few minutes."
     message "Since you gave your GitHub repository a special name (in the format [your-github-user-name].github.io), GitHub will automatically take the contents of this one repository and make them your personal web page on GitHub. However, there's a small lag between the first push and being able to see your content on the web."
-    message "In a few minutes time, when you visit [your-github-user-name].github.io in a browser, you should see the portfolio page you made: this is great! You're looking your code, now live on the web!"
+    message "In a few minutes time, when you visit [your-github-user-name].github.io in a browser, you should see the portfolio page you made: this is great! You're looking at your code, now live on the web!"
   end
 end
 
