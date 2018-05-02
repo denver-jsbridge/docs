@@ -46,7 +46,7 @@ steps do
   step "Connect to your remote Github repository" do
   	message "Connect to the remote repository you just created on Github from your local machine. This will allow you to later push your local project files to your remote Github repository, and allow those files to go live on the web. Go back to your Terminal or Command Prompt app to perform the next steps."
     console "git remote add origin https://[your-github-user-name]/[your-github-user-name].github.io.git"
-    
+  end
     
   step "Push your code to GitHub" do
     message "Now, push the new file you just committed to GitHub."
