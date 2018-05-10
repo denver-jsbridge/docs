@@ -17,8 +17,9 @@ markdown <<-MARKDOWN
       return { top: segment.top, left: segment.left + 1 }
     } else if (segment.direction === "left") {
       return { top: segment.top, left: segment.left - 1 }
+    } else {
+      return segment;
     }
-    return segment;
   }
   ```
 
@@ -26,7 +27,8 @@ markdown <<-MARKDOWN
   to return a new object with coordinates offset from the passed in segment.
 
   When the passed in segment doesn't have a direction or it doesn't match the
-  directions in our `if`/`else if` then we return the original segment object.
+  directions in our `if`/`else if`, then it goes into the "catch-all" `else` block at the end 
+  and we return the original segment object.
 
   Our returned segment doesn't have a direction; which means the snake will
   only move once! To keep the snake moving we need to assign every `newSegment` a
