@@ -1,6 +1,6 @@
 goals do
   goal "Understand how the internet is made up of clients and servers."
-  goal "Write some basic requests using JavaScript, jQuery and your browser's console."
+  goal "Write some basic requests using JavaScript  and your browser's console."
   goal "Create a list and your first item."
 end
 
@@ -41,12 +41,11 @@ depending on what the user is doing. For instance, Twitter doesn't load your ent
 feed at once – as you scroll down the page, it's making more and more requests!
 
 To accomplish that feat, websites can use JavaScript to make requests to servers,
-updating the page without the user having to refresh. This type of
-request is called an __AJAX__ request, which stands for __A__synchronous __J__avaScript
-__a__nd __X__ML. It's a technique that is used by most major websites, to provide
-a seamless experience to their users.
+updating the page without the user having to refresh. It's a technique that is used by
+most major websites, to provide a seamless experience to their users.
 
-In this lesson, we'll be making AJAX requests using our browser's console.
+In this lesson, we'll be making requests using our browser's console and the
+[fetch API](https://developers.google.com/web/updates/2015/03/introduction-to-fetch).
   MARKDOWN
 end
 
@@ -59,10 +58,11 @@ with your name of choice. Note: it has to be unique! I'd suggest using your gith
     MARKDOWN
 
     source_code :javascript, <<-JAVASCRIPT
-       $.ajax({
-         type: 'POST',
-         url: "https://listalous.herokuapp.com/lists",
-         data: { name: 'YOUR-LIST-NAME-HERE' }
+       fetch('https://listalous.herokuapp.com/lists',
+       {
+         headers: {'content-type': 'application/json'},
+         method: 'POST',
+         data: JSON.stringify({ name: 'YOUR-LIST-NAME-HERE' })
        })
     JAVASCRIPT
 
@@ -79,16 +79,18 @@ do you think it failed? Once you've successfully created a list, move on to the 
   step do
     message <<-MARKDOWN
 Now that we've created a list, let's create our list's first item. We're
-going to use jQuery's AJAX function again to do so. Copy the following
+going to use the fetch function again to do so. Copy the following
 code into your browser's console, replacing 'YOUR-LIST-NAME-HERE' with
 your list's name, and 'DESCRIPTION-OF-YOUR-ITEM' with your item's description.
     MARKDOWN
 
     source_code :javascript, <<-JAVASCRIPT
-      $.ajax({
-       type: 'POST',
-       url: "https://listalous.herokuapp.com/lists/YOUR-LIST-NAME-HERE/items",
-       data: { description: 'DESCRIPTION-OF-YOUR-ITEM', completed: false }
+      fetch(
+        'https://listalous.herokuapp.com/lists/YOUR-LIST-NAME-HERE/items',
+        {
+          headers: {'content-type': 'application/json'},
+          method: 'POST',
+          body: JSON.stringify({ description: 'DESCRIPTION-OF-YOUR-ITEM', completed: false })
       })
     JAVASCRIPT
 
@@ -108,10 +110,12 @@ list's name.
     MARKDOWN
 
     source_code :javascript, <<-JAVASCRIPT
-     $.ajax({
-       type: 'GET',
-       url: "https://listalous.herokuapp.com/lists/YOUR-LIST-NAME-HERE/"
-     })
+     fetch(
+       url: "https://listalous.herokuapp.com/lists/YOUR-LIST-NAME-HERE/",
+       {
+         type: 'GET'
+       }
+     )
     JAVASCRIPT
 
     message <<-MARKDOWN
@@ -140,7 +144,7 @@ In this case, we have a server that can be reached over the internet at
 https://listalous.herokuapp.com/. It's attached to a database that
 stores all lists and items, that can fetched to make hundreds of independent to do lists.
 
-In step 1, we used jQuery's AJAX function to ask the server to make a
+In step 1, we used javascript's Fetch function to ask the server to make a
 new list in its database. It only did so if the list's name was unique;
 otherwise, how could the server tell your list apart from someone else's list?
 
@@ -155,7 +159,7 @@ application, we will use this data to load all items on our list every time we
 refresh the page.
 
 We did all of this in the browser's console. In the next lesson, we'll learn
-how modern web applications integrate AJAX requests into their applications.
+how modern web applications integrate network requests into their applications.
 
    MARKDOWN
 end
