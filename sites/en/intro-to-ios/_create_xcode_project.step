@@ -1,0 +1,22 @@
+step do
+  message "Open Xcode (Applications > Xcode) and create a new project."
+  img src: "img/xcode-create-new-project.png", alt: "Screenshot of Xcode landing page"
+end
+
+step do
+  message <<-MARKDOWN
+    Select `Single View App` from the templates and click `Next`
+  MARKDOWN
+  img src: "img/select-project-template.png", alt: "Screenshot of Xcode project template window"
+end
+
+step do
+  message <<-MARKDOWN
+    Fill out the `Product Name` (App name) and `Organization Identifier` (for example, com.my). Select `Swift` from Language dropdown, and uncheck everything else. Click `Next`.
+  MARKDOWN
+  img src: "img/project-options.png", alt: "Screenshot of Xcode project options window"
+end
+
+step do
+  message "Select a location for your project source code, and you got yourself a blank project!"
+end
